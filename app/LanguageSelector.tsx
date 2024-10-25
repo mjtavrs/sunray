@@ -9,6 +9,7 @@ import {
 } from '@radix-ui/react-dropdown-menu'
 import { motion } from 'framer-motion'
 import { CaretDown } from '@phosphor-icons/react/dist/ssr'
+import Image from 'next/image'
 
 type Language = {
   label: string
@@ -45,13 +46,15 @@ export default function LanguageSelector() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex items-center">
-          <img
+          <Image
             src={
               languages.find((lang) => lang.label === selectedLanguage)?.flag ||
               ''
             }
             alt={selectedLanguage}
-            className="mr-2 h-5 w-5"
+            width={20}
+            height={20}
+            className="mr-2"
           />
           {selectedLanguage}
           <span className="ml-2">
@@ -76,10 +79,12 @@ export default function LanguageSelector() {
                 onSelect={() => handleSelectLanguage(language)}
                 className="flex cursor-pointer items-center px-2"
               >
-                <img
+                <Image
                   src={language.flag}
                   alt={language.label}
-                  className="my-2 mr-2 h-5 w-5"
+                  width={20}
+                  height={20}
+                  className="my-2 mr-2"
                 />
                 {language.label}
               </DropdownMenuItem>
