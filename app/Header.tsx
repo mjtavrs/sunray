@@ -1,3 +1,5 @@
+import LanguageSelector from "./LanguageSelector";
+
 export default function Header() {
     return (
         <header className="flex justify-between items-center p-8 border-b-2 border-b-gray-200">
@@ -5,10 +7,11 @@ export default function Header() {
                 <input className="bg-gray-100 px-4 py-2 w-80" type="text" placeholder="Search for a location here" />
             </div>
             <div className="flex items-center gap-20">
-                <div className="flex flex-col">
-                    <span>English</span>
+                <div>
+                    {/* <span>English</span>
                     <span>Portuguese</span>
-                    <span>Spanish</span>
+                    <span>Spanish</span> */}
+                    <LanguageSelector />
                 </div>
                 <div>
                     <span>Celsius</span>
