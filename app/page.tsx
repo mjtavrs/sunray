@@ -1,9 +1,9 @@
-import Header from "./Header";
+import Header from './Header'
 
 export default function Home() {
   return (
-    <div className="h-dvh w-dvw p-20 bg-gray-200">
-      <div className="w-full h-full bg-white rounded-lg">
+    <div className="h-dvh w-dvw bg-gray-200 p-20 text-sm">
+      <div className="h-full w-full rounded-lg bg-white">
         <Header />
       </div>
     </div>
